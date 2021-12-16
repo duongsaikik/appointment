@@ -9,18 +9,18 @@ namespace ASC.Business.Interface
 {
    public interface IServiceRequestOperations
     {
-        Task CreateServiceRequestAsync(ServiceRequest request);
-        Task<ServiceRequest> UpdateServiceRequestAsync(ServiceRequest request);
-        Task<ServiceRequest> UpdateServiceRequestStatusAsync(string rowKey, string partitionKey, string status);
-        Task<List<ServiceRequest>> GetServiceRequestsByRequestedDateAndStatus
+        Task CreateServiceRequestAsync(ServiceRequestt request);
+        Task<ServiceRequestt> UpdateServiceRequestAsync(ServiceRequestt request);
+        Task<ServiceRequestt> UpdateServiceRequestStatusAsync(string rowKey, string partitionKey, string status);
+        Task<List<ServiceRequestt>> GetServiceRequestsByRequestedDateAndStatus
             (DateTime? requestedDate,
               List<string> status = null,
               string email = "",
               string serviceEngineerEmail = "");
-        Task<List<ServiceRequest>> GetServiceRequestsFormAudit(string serviceEngineerEmail = "");
-        Task<List<ServiceRequest>> GetActiveServiceRequests(List<string> status);
-        Task<ServiceRequest> GetServiceRequestByRowKey(string id);
-        Task<List<ServiceRequest>> GetServiceRequestAuditByPartitionKey(string id);
+        Task<List<ServiceRequestt>> GetServiceRequestsFormAudit(string serviceDoctorEmail = "");
+        Task<List<ServiceRequestt>> GetActiveServiceRequests(List<string> status);
+        Task<ServiceRequestt> GetServiceRequestByRowKey(string id);
+        Task<List<ServiceRequestt>> GetServiceRequestAuditByPartitionKey(string id);
 
     }
 

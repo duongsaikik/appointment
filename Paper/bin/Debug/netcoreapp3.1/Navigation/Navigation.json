@@ -1,0 +1,93 @@
+{
+  "MenuItems": [
+    {
+      "DisplayName": "Dashboard",
+      "Icon": "bx-grid-alt",
+      "Link": "/ServiceRequests/Dashboard/Dashboard",
+      "IsNested": false,
+      "Sequence": 1,
+      "UserRoles": [ "User", "Doctor", "Admin" ],
+      "NestedItems": []
+    },
+    {
+      "DisplayName": "User",
+      "Icon": "bxs-user-pin",
+      "Link": "",
+      "IsNested": true,
+      "Sequence": 2,
+      "UserRoles": [ "Admin" ],
+      "NestedItems": [
+        {
+          "DisplayName": "Customer",
+          "Icon": "bxs-user-account",
+          "Link": "/Accounts/Account/Customers",
+          "IsNested": false,
+          "Sequence": 1,
+          "UserRoles": [ "Admin" ],
+          "NestedItems": []
+        },
+        {
+          "DisplayName": "Doctors",
+          "Icon": "bx-user",
+          "Link": "/Accounts/Account/ServiceDoctors",
+          "IsNested": false,
+          "Sequence": 2,
+          "UserRoles": [ "Admin" ],
+          "NestedItems": []
+        }
+      ]
+    },
+    {
+      "DisplayName": "Service Requests",
+      "Icon": "bx-task",
+      "Link": "/ServiceRequests/ServiceRequest/ServiceRequest",
+      "IsNested": false,
+      "Sequence": 3,
+      "UserRoles": [ "User", "Doctor", "Admin" ],
+      "NestedItems": []
+    },
+
+   
+    {
+      "DisplayName": "Service",
+      "Icon": "bx-book-alt",
+      "Link": "/Configuration/MasterData/MasterKeys",
+      "IsNested": false,
+      "Sequence": 6,
+      "UserRoles": [ "Admin" ],
+      "NestedItems": []
+    },
+    {
+      "DisplayName": "Settings",
+      "Icon": "bx-cog",
+      "Link": "",
+      "IsNested": true,
+      "Sequence": 7,
+      "UserRoles": [ "User", "Doctor", "Admin" ],
+      "NestedItems": [
+        {
+
+          "DisplayName": "ProFile",
+          "Icon": "bxs-user-detail",
+          "Link": "/Accounts/Account/Profile",
+          "IsNested": false,
+          "Sequence": 1,
+          "UserRoles": [ "User", "Doctor", "Admin" ],
+          "NestedItems": []
+        },
+        {
+          "DisplayName": "Reset Password",
+          "Icon": "bx-reset",
+          "Link": "#!",
+          "IsNested": false,
+
+          "Sequence": 2,
+          "UserRoles": ["Doctor", "Admin" ],
+          "NestedItems": []
+        }
+      ]
+    }
+
+  ]
+
+}

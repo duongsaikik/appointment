@@ -2477,21 +2477,6 @@
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
       },
-      "ASC.DataAccess/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "ASC.Models": "1.0.0",
-          "ASC.Utilities": "1.0.0",
-          "WindowsAzure.Storage": "9.3.3"
-        },
-        "compile": {
-          "bin/placeholder/ASC.DataAccess.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/ASC.DataAccess.dll": {}
-        }
-      },
       "ASC.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -2511,13 +2496,30 @@
         "dependencies": {
           "Microsoft.AspNetCore.Http.Features": "5.0.10",
           "Microsoft.AspNetCore.Mvc": "2.2.0",
-          "Newtonsoft.Json": "13.0.1"
+          "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.2.0",
+          "Newtonsoft.Json": "13.0.1",
+          "WindowsAzure.Storage": "9.3.3"
         },
         "compile": {
           "bin/placeholder/ASC.Utilities.dll": {}
         },
         "runtime": {
           "bin/placeholder/ASC.Utilities.dll": {}
+        }
+      },
+      "DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "ASC.Models": "1.0.0",
+          "ASC.Utilities": "1.0.0",
+          "WindowsAzure.Storage": "9.3.3"
+        },
+        "compile": {
+          "bin/placeholder/DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataAccess.dll": {}
         }
       }
     }
@@ -7711,11 +7713,6 @@
         "windowsazure.storage.nuspec"
       ]
     },
-    "ASC.DataAccess/1.0.0": {
-      "type": "project",
-      "path": "../ASC.DataAccess/ASC.DataAccess.csproj",
-      "msbuildProject": "../ASC.DataAccess/ASC.DataAccess.csproj"
-    },
     "ASC.Models/1.0.0": {
       "type": "project",
       "path": "../ASC.Models/ASC.Models.csproj",
@@ -7725,12 +7722,17 @@
       "type": "project",
       "path": "../ASC.Utilities/ASC.Utilities.csproj",
       "msbuildProject": "../ASC.Utilities/ASC.Utilities.csproj"
+    },
+    "DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../DataAccess/DataAccess.csproj",
+      "msbuildProject": "../DataAccess/DataAccess.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "ASC.DataAccess >= 1.0.0",
-      "ASC.Models >= 1.0.0"
+      "ASC.Models >= 1.0.0",
+      "DataAccess >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -7740,11 +7742,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Lap1-master\\ASC.Business\\ASC.Business.csproj",
+      "projectUniqueName": "D:\\Web\\projectPaper\\ASC.Business\\ASC.Business.csproj",
       "projectName": "ASC.Business",
-      "projectPath": "D:\\Lap1-master\\ASC.Business\\ASC.Business.csproj",
+      "projectPath": "D:\\Web\\projectPaper\\ASC.Business\\ASC.Business.csproj",
       "packagesPath": "C:\\Users\\ADMINS\\.nuget\\packages\\",
-      "outputPath": "D:\\Lap1-master\\ASC.Business\\obj\\",
+      "outputPath": "D:\\Web\\projectPaper\\ASC.Business\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -7765,11 +7767,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\Lap1-master\\ASC.DataAccess\\ASC.DataAccess.csproj": {
-              "projectPath": "D:\\Lap1-master\\ASC.DataAccess\\ASC.DataAccess.csproj"
+            "D:\\Web\\projectPaper\\ASC.Models\\ASC.Models.csproj": {
+              "projectPath": "D:\\Web\\projectPaper\\ASC.Models\\ASC.Models.csproj"
             },
-            "D:\\Lap1-master\\ASC.Models\\ASC.Models.csproj": {
-              "projectPath": "D:\\Lap1-master\\ASC.Models\\ASC.Models.csproj"
+            "D:\\Web\\projectPaper\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "D:\\Web\\projectPaper\\DataAccess\\DataAccess.csproj"
             }
           }
         }

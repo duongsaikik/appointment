@@ -8,8 +8,8 @@
     ".NETCoreApp,Version=v3.1": {
       "ASC.Business/1.0.0": {
         "dependencies": {
-          "ASC.DataAccess": "1.0.0",
-          "ASC.Models": "1.0.0"
+          "ASC.Models": "1.0.0",
+          "DataAccess": "1.0.0"
         },
         "runtime": {
           "ASC.Business.dll": {}
@@ -1714,16 +1714,6 @@
           }
         }
       },
-      "ASC.DataAccess/1.0.0": {
-        "dependencies": {
-          "ASC.Models": "1.0.0",
-          "ASC.Utilities": "1.0.0",
-          "WindowsAzure.Storage": "9.3.3"
-        },
-        "runtime": {
-          "ASC.DataAccess.dll": {}
-        }
-      },
       "ASC.Models/1.0.0": {
         "dependencies": {
           "WindowsAzure.Storage": "9.3.3"
@@ -1736,10 +1726,22 @@
         "dependencies": {
           "Microsoft.AspNetCore.Http.Features": "5.0.10",
           "Microsoft.AspNetCore.Mvc": "2.2.0",
-          "Newtonsoft.Json": "13.0.1"
+          "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.2.0",
+          "Newtonsoft.Json": "13.0.1",
+          "WindowsAzure.Storage": "9.3.3"
         },
         "runtime": {
           "ASC.Utilities.dll": {}
+        }
+      },
+      "DataAccess/1.0.0": {
+        "dependencies": {
+          "ASC.Models": "1.0.0",
+          "ASC.Utilities": "1.0.0",
+          "WindowsAzure.Storage": "9.3.3"
+        },
+        "runtime": {
+          "DataAccess.dll": {}
         }
       }
     }
@@ -2891,17 +2893,17 @@
       "path": "windowsazure.storage/9.3.3",
       "hashPath": "windowsazure.storage.9.3.3.nupkg.sha512"
     },
-    "ASC.DataAccess/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "ASC.Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "ASC.Utilities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DataAccess/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

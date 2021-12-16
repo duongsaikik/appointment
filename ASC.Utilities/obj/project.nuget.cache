@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MXe90Kh4l3bm83SVIl4aL24Una318pneZhK4jvIdQE0XbJQjG4AeiHTNCedyycMbZ+fETns1YR+JP1mGBGrKzw==",
+  "dgSpecHash": "6gPM9cHNeoD035Nx8iLanQkBGM5fIg9Gx28P82JhKRu7Y00zbZGd525CjnFGsv9OPaB7uOsN9hLdUxWLQxd5Bg==",
   "success": true,
-  "projectFilePath": "D:\\Lap1-master\\ASC.Utilities\\ASC.Utilities.csproj",
+  "projectFilePath": "D:\\Web\\projectPaper\\ASC.Utilities\\ASC.Utilities.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMINS\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
     "C:\\Users\\ADMINS\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
@@ -165,7 +165,8 @@
     "C:\\Users\\ADMINS\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\ADMINS\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\ADMINS\\.nuget\\packages\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
-    "C:\\Users\\ADMINS\\.nuget\\packages\\system.xml.xpath.xdocument\\4.3.0\\system.xml.xpath.xdocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\ADMINS\\.nuget\\packages\\system.xml.xpath.xdocument\\4.3.0\\system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\ADMINS\\.nuget\\packages\\windowsazure.storage\\9.3.3\\windowsazure.storage.9.3.3.nupkg.sha512"
   ],
   "logs": []
 }

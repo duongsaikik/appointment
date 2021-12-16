@@ -1,0 +1,14 @@
+D:\Web\projectPaper\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.deps.json
+D:\Web\projectPaper\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.dll
+D:\Web\projectPaper\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.pdb
+D:\Web\projectPaper\DataAccess\bin\Debug\netcoreapp3.1\ASC.Models.dll
+D:\Web\projectPaper\DataAccess\bin\Debug\netcoreapp3.1\ASC.Utilities.dll
+D:\Web\projectPaper\DataAccess\bin\Debug\netcoreapp3.1\ASC.Models.pdb
+D:\Web\projectPaper\DataAccess\bin\Debug\netcoreapp3.1\ASC.Utilities.pdb
+D:\Web\projectPaper\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csprojAssemblyReference.cache
+D:\Web\projectPaper\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.AssemblyInfoInputs.cache
+D:\Web\projectPaper\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.AssemblyInfo.cs
+D:\Web\projectPaper\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csproj.CoreCompileInputs.cache
+D:\Web\projectPaper\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csproj.CopyComplete
+D:\Web\projectPaper\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.dll
+D:\Web\projectPaper\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.pdb

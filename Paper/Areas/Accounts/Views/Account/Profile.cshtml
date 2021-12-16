@@ -1,0 +1,39 @@
+﻿@model Paper.Areas.Accounts.Models.ProfileModel
+
+
+@{
+    ViewData["Title"] = "ProFile";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+<div class="container overflow-hidden">
+    <div class="row gx-5">
+        <div class="col">
+            <div class="p-3 border bg-light">
+                <form asp-controller="Account" asp-action="Profile" method="post" class="col s12">
+                
+                    <div class="form-floating mb-3">
+                        <input asp-for="UserName" class="form-control" id="Input_Registration_Email" />
+                        <label asp-for="UserName"></label>
+                    </div>
+
+
+
+                  
+                    <div class="input-field col s4 right-align">
+                        <button class="btn waves-effect waves-light btnSubmit" type="submit"
+                                name="action">
+                            Save
+
+                        </button>
+                        <button class="btn waves-effect waves-light reset red lighten-1"
+                                type="button" name="action">
+                            Reset
+                        </button>
+                    </div>
+                    <div class="row col s12 right-align" asp-validation-summary="All"></div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>

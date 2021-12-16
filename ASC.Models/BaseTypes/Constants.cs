@@ -15,11 +15,11 @@ namespace ASC.Models.BaseTypes
     }
     public enum Roles
     {
-        Admin, Engineer, User
+        Admin, Doctor, User
     }
     public enum MasterKeys
     {
-        VehicleManufacturer, VehicleType
+         ServiceType
     }
     public enum Status
     {

@@ -1,0 +1,75 @@
+﻿@model Paper.Areas.ServiceRequests.Models.NewServiceRequestViewModel
+@using System.Globalization;
+@{
+    ViewData["Title"] = "ServiceRequest";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+<div class="container overflow-hidden">
+    <div class="row gx-5">
+        <div class="col">
+            <div class="p-3 mb-2 bg-primary text-white">
+                <h5>
+                    Resquest
+                </h5>
+            </div>
+            <div class="p-3 border bg-light">
+                <form asp-controller="ServiceRequest" asp-action="ServiceRequest" method="post" class="col s12">
+                    <div class="row gx-5">
+                        <div class="col">
+                            <div class="form-floating mb-3">
+                                <select class="form-select" aria-label="Default select example" id="Select_MasterValueInContext_PartitionKey"
+                                        asp-for="ServiceType"
+                                        asp-items="@(new SelectList(ViewBag.ServiceTypes,"RowKey","Name"))" required="required">
+                                    >
+                                    <option value="">--Select--</option>
+
+                                </select>
+                                <label asp-for="ServiceType"></label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <div class='input-group date'>
+                                    <input asp-for="RequestedDate" type='date' class="form-control" />
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div class="input-field col s4 right-align">
+                        <button class="btn btn-primary btnSubmit" type="submit"
+                                name="action">
+                            Create
+
+                        </button>
+
+                        <button class="btn btn-primary reset red lighten-1"
+                                type="button" name="action">
+                            Reset
+                        </button>
+                    </div>
+                    <div class="row col s12 right-align" asp-validation-summary="All"></div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $('#datetimepicker1').datepicker(
+               
+            );
+           
+        });
+    </script>
+}

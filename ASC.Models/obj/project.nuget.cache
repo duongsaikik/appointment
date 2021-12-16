@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zrSmQBkAbatTedjPRNsDt+uII42QcQ7AwN3n3GF9Mz/kbQt/QMCTiZspYSWXFEJkx0FT2SYCAUr/p0xIioe6Rg==",
+  "dgSpecHash": "eVwS/bcJS9Z817vyerfqNWJKTHsL3l9reDfZDn6+pDzbepDMhvXJJxnm54RyIaBKfDBSTqBoB/BsiOmlulPBLw==",
   "success": true,
-  "projectFilePath": "D:\\Lap1-master\\ASC.Models\\ASC.Models.csproj",
+  "projectFilePath": "D:\\Web\\projectPaper\\ASC.Models\\ASC.Models.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMINS\\.nuget\\packages\\microsoft.csharp\\4.3.0\\microsoft.csharp.4.3.0.nupkg.sha512",
     "C:\\Users\\ADMINS\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",

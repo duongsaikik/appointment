@@ -11,7 +11,7 @@ namespace ASC.Utilities.Navigation
     public class NavigationMenuItem
     {
         public string DisplayName { get; set; }
-        public string MaterialIcon { get; set; }
+        public string Icon { get; set; }
         public string Link { get; set; }
     
         public bool IsNested { get; set; }

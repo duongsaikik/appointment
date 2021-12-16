@@ -8,15 +8,15 @@ namespace ASC.Business.Interface
 {
     public interface IMasterDataOperations
     {
-        Task<List<MasterDataKey>> GetAllMasterKeysAsync();
-        Task<List<MasterDataKey>> GetMaserKeyByNameAsync(string name);
-        Task<bool> InsertMasterKeyAsync(MasterDataKey key);
-        Task<bool> UpdateMasterKeyAsync(string orginalPartitionKey, MasterDataKey key);
-        Task<List<MasterDataValue>> GetAllMasterValuesByKeyAsync(string key);
-        Task<List<MasterDataValue>> GetAllMasterValuesAsync();
-        Task<MasterDataValue> GetMasterValueByNameAsync(string key, string name);
-        Task<bool> InsertMasterValueAsync(MasterDataValue value);
-        Task<bool> UpdateMasterValueAsync(string originalPartitionKey, string originalRowKey, MasterDataValue value);
-        Task<bool> UploadBulkMasterData(List<MasterDataValue> values);
+        Task<List<MasterDataKeyy>> GetAllMasterKeysAsync();
+        Task<List<MasterDataKeyy>> GetMaserKeyByNameAsync(string name);
+        Task<bool> InsertMasterKeyAsync(MasterDataKeyy key);
+        Task<bool> UpdateMasterKeyAsync(string orginalPartitionKey, MasterDataKeyy key);
+        Task<List<MasterDataValuey>> GetAllMasterValuesByKeyAsync(string key);
+        Task<List<MasterDataValuey>> GetAllMasterValuesAsync();
+        Task<MasterDataValuey> GetMasterValueByNameAsync(string key, string name);
+        Task<bool> InsertMasterValueAsync(MasterDataValuey value);
+        Task<bool> UpdateMasterValueAsync(string originalPartitionKey, string originalRowKey, MasterDataValuey value);
+        Task<bool> UploadBulkMasterData(List<MasterDataKeyy> values);
     }
 }

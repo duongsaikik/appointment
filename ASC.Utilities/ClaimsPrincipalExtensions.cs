@@ -12,8 +12,7 @@ namespace ASC.Utilities
         
         public static CurrentUser GetCurrentUserDetails(this ClaimsPrincipal principal)
         {
-
-            var s = ClaimsPrincipal.Current;
+  
             if (!principal.Claims.Any())
                 return null;
             return new CurrentUser

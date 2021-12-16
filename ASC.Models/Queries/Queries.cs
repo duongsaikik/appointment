@@ -18,8 +18,7 @@ namespace ASC.Models.Queries
             // Add Requested Date Clause
             if (requestedDate.HasValue)
             {
-                finalQuery = TableQuery.GenerateFilterConditionForDate("RequestedDate",
-               Constants.GreaterThanOrEqual, requestedDate.Value);
+                finalQuery = TableQuery.GenerateFilterConditionForDate("RequestedDate",Constants.GreaterThanOrEqual, requestedDate.Value);
             }
             // Add Email clause if email is passed as a parameter
             if (!string.IsNullOrWhiteSpace(email))
@@ -34,9 +33,9 @@ namespace ASC.Models.Queries
             {
                 finalQuery = !string.IsNullOrWhiteSpace(finalQuery) ?
                 TableQuery.CombineFilters(finalQuery, TableOperators.And, TableQuery.
-               GenerateFilterCondition("ServiceEngineer", Constants.Equal,
+               GenerateFilterCondition("ServiceDoctor", Constants.Equal,
                serviceEngineerEmail)) :
-                TableQuery.GenerateFilterCondition("ServiceEngineer", Constants.Equal,
+                TableQuery.GenerateFilterCondition("ServiceDoctor", Constants.Equal,
                serviceEngineerEmail);
             }
             // Add Status clause if status is passed a parameter.
@@ -63,7 +62,7 @@ namespace ASC.Models.Queries
             // Add Email clause if email is passed as a parameter
             if (!string.IsNullOrWhiteSpace(email))
             {
-                finalQuery = TableQuery.GenerateFilterCondition("ServiceEngineer", Constants.Equal,
+                finalQuery = TableQuery.GenerateFilterCondition("ServiceDoctor", Constants.Equal,
                email);
             }
             return finalQuery;

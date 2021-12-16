@@ -1,0 +1,101 @@
+﻿@using Microsoft.AspNetCore.Http
+@using Microsoft.Extensions.Options;
+@using ASC.Utilities
+@using Paper.Web.Configuration;
+@inject IHttpContextAccessor UserHttpContext
+@{
+
+    var currentUser = UserHttpContext.HttpContext.User.GetCurrentUserDetails();
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Paper</title>
+
+    <link href="~/css/home/materialize.css" rel="stylesheet" />
+
+    <link href="~/css/home/materialize.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="~/css/home/style.css" rel="stylesheet" />
+    
+</head>
+<body>
+
+    <div id="index-banner" class="parallax-container">
+        <style>
+            .text-roboto {
+                font-family: roboto;
+            }
+
+            .font-big {
+                font-size: 500%;
+            }
+
+            .key {
+                font-size: 130%;
+                font-weight: 700;
+                font-family: 'Arial Unicode MS';
+                color: #cb0000;
+            }
+
+            .font-medium {
+                font-size: xx-large;
+            }
+
+            .linear {
+                background: linear-gradient(to bottom,#ffd800,#ff6a00);
+            }
+
+            .button {
+                border-radius: 3px;
+            }
+
+            .masterial-height {
+                height: 100%;
+            }
+        </style>
+        <div class="section no-pad-bot ">
+            <div class="container">
+                <br><br>
+                <h1 class="header center text-roboto font-big">Răng hàm mặt trung ương</h1>
+                <div class="row center">
+                    <h5 class="header font-medium">Giảm giá lên đến <span class="key">50%</span> trong mùa giáng sinh</h5>
+                </div>
+                <div class="row center">
+                    <a href="~/Identity/Account/Login" id="download-button" class="btn-large waves-effect waves-light teal linear button">Đăng ký ngay</a>
+                </div>
+                <br><br>
+
+            </div>
+        </div>
+        <div class="parallax">
+
+            <img src="~/image/smileheader.png" />
+        </div>
+
+
+
+    </div>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - Paper - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/home/materialize.js"></script>
+    <script src="~/js/home/materialize.min.js"></script>
+    <script src="~/js/home/init.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

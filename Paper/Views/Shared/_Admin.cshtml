@@ -1,0 +1,140 @@
+﻿@using Microsoft.AspNetCore.Http
+@using Microsoft.Extensions.Options;
+@using ASC.Utilities
+@using Paper.Web.Configuration;
+@inject IHttpContextAccessor UserHttpContext
+@inject IOptions<ApplicationSettings> _configurationSettings
+@using Paper.Data
+@inject INavigationCacheOperations navigationCache
+@{
+
+    var currentUser = UserHttpContext.HttpContext.User.GetCurrentUserDetails();
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+
+
+
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="sidebar close">
+        <div class="logo-details">
+            <i class='bx bxl-c-plus-plus'></i>
+            <span class="logo_name">@_configurationSettings.Value.ApplicationTitle</span>
+        </div>
+        <ul class="nav-links">
+            <!--<li>
+                <a href="/ServiceRequests/Dashboard/Dashboard">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="link_name">Dashboard</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Dashboard</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bxs-user-pin'></i>
+                        <span class="link_name">User</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Category</a></li>
+                    <li><a href="/Accounts/Account/Customers">Customers</a></li>
+                    <li><a href="/Accounts/Account/ServiceDoctors">Doctors</a></li>
+
+                </ul>
+            </li>-->
+            @*<li>
+                    <div class="iocn-link">
+                        <a href="#">
+                            <i class='bx bx-book-alt'></i>
+                            <span class="link_name">Category</span>
+                        </a>
+                        <i class='bx bxs-chevron-down arrow'></i>
+                    </div>
+                    <ul class="sub-menu">
+                        <li><a class="link_name" href="#">Category</a></li>
+                        <li><a href="/Configuration/MasterData/MasterKeys">MasterKey</a></li>
+                        <li><a href="/Configuration/MasterData/MasterValues">MasterValue</a></li>
+                        <li><a href="#">Card Design</a></li>
+                    </ul>
+                </li>*@
+            <!--<li>
+                <a href="/Configuration/MasterData/MasterKeys">
+                    <i class='bx bxs-category'></i>
+                    <span class="link_name">Category</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Category</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="/ServiceRequests/ServiceRequest/ServiceRequest">
+                    <i class='bx bx-task'></i>
+                    <span class="link_name">Request</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Request</a></li>
+                </ul>
+            </li>-->
+
+            @await Component.InvokeAsync("ASC.Utilities.Navigation.LeftNavigation", await navigationCache.GetNavigationCacheAsync())
+
+
+            <li>
+                <div class="profile-details">
+                    <div class="profile-content">
+                        <img src="/image/admin.png" />
+                    </div>
+                    <div class="name-job">
+                        <div class="profile_name">Logout</div>
+                        @*<div class="job">@currentUser.Email</div>*@
+                    </div>
+                    <a href="/Identity/Account/Logout"><i class='bx bx-log-out'></i></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <div class="home-content">
+            <i class='bx bx-menu'></i>
+            <span class="text">@currentUser.Name</span>
+        </div>
+        <div class="section_content">
+            @RenderBody()
+        </div>
+    </section>
+    <form class="hide" method="post" id="resetPassword_form" asp-area="Identity" asp-page="/Account/InitiateResetPassword">
+    </form>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    <script src="~/js/script.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/home/materialize.js"></script>
+    <script src="~/js/home/materialize.min.js"></script>
+    
+    <script src="~/lib/microsoft/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/chat.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
